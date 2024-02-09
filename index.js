@@ -59,12 +59,9 @@ function levelUp() {
   let newColor = getRandomColor();
   gameLevelArray.push(newColor);
 
-  for (let i = 0; i < gameLevelArray.length; i++) {
-    setTimeout(function () {
-      buttonClick(gameLevelArray[i]);
-    }, 500 * (i + 1));
-  }
-
+  setTimeout(function () {
+    buttonClick(newColor);
+  }, 500);
   document.querySelector("#level-title").innerHTML =
     "Level " + gameLevelArray.length;
   playerLevelArray = [];
